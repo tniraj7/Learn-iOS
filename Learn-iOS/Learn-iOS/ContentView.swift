@@ -2,7 +2,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        
         VStack {
             HStack {
                 VStack(alignment: .leading) {
@@ -27,8 +26,8 @@ struct ContentView: View {
         }
         .frame(width: 340.0, height: 220.0)
         .background(Color.black)
-         .cornerRadius(10)
-        
+        .cornerRadius(10)
+        .shadow(radius: 20)
     }
 }
 
