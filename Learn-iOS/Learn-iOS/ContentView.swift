@@ -21,8 +21,6 @@ struct ContentView: View {
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: 5))
                 .rotation3DEffect(Angle(degrees: 30), axis: (x: 10.0, y: 10.0, z: 10.0))
-
-
         }
     }
 }
@@ -39,7 +37,7 @@ struct CardView: View {
             Text("Card Back")
         }
         .frame(width: 340.0, height: 220.0)
-        .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+        .background(Color.blue)
         .cornerRadius(10)
         .shadow(radius: 20)
     }
