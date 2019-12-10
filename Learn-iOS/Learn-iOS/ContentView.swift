@@ -6,22 +6,7 @@ struct ContentView: View {
             
             TitleView()
             
-            VStack(spacing: 20.0) {
-                Rectangle()
-                    .frame(width: 60, height: 6)
-                    .cornerRadius(3.0)
-                    .opacity(0.1)
-                
-                Text("This certificate is proof that Bob has achieved the UI Design course with approval from a Desgin Academy.")
-                    .lineLimit(10)
-                Spacer()
-            }
-            .frame(minWidth: 0, maxHeight: .infinity)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(30)
-            .shadow(radius: 20)
-            .offset(y: 600)
+            CardBottomView()
 
             CardView()
                 .offset(x: 0, y: -40)
@@ -107,5 +92,26 @@ struct TitleView: View {
             Spacer()
         }
         .padding(.all)
+    }
+}
+
+struct CardBottomView: View {
+    var body: some View {
+        VStack(spacing: 20.0) {
+            Rectangle()
+                .frame(width: 60, height: 6)
+                .cornerRadius(3.0)
+                .opacity(0.1)
+            
+            Text("This certificate is proof that Bob has achieved the UI Design course with approval from a Desgin Academy.")
+                .lineLimit(10)
+            Spacer()
+        }
+        .frame(minWidth: 0, maxHeight: .infinity)
+        .padding()
+        .background(Color.white)
+        .cornerRadius(30)
+        .shadow(radius: 20)
+        .offset(y: 600)
     }
 }
