@@ -4,17 +4,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            VStack {
-                HStack {
-                    Text("Certificates")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Spacer()
-                }
-                Image("Illustration5")
-                Spacer()
-            }
-            .padding(.all)
+            TitleView()
             
             VStack(spacing: 20.0) {
                 Rectangle()
@@ -101,5 +91,21 @@ struct CertificateView: View {
         .background(Color.black)
         .cornerRadius(10)
         .shadow(radius: 20)
+    }
+}
+
+struct TitleView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Certificates")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                Spacer()
+            }
+            Image("Illustration5")
+            Spacer()
+        }
+        .padding(.all)
     }
 }
