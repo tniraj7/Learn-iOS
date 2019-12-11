@@ -29,7 +29,7 @@ struct ContentView: View {
                 .offset(x: viewState.width, y: viewState.height)
             
             CardView()
-                .background(show ? Color.red : Color("background8"))
+                .background(show ? Color("background5") : Color("background8"))
                 .cornerRadius(10)
                 .shadow(radius: 20)
                 .offset(x: 0, y: show ? -100: -20)
