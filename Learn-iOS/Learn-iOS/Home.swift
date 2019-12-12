@@ -15,20 +15,35 @@ let menuData = [
 
 struct Home: View {
     var menu = menuData
+    @State var show = false
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ForEach(menu) { item in
-                MenuRow(image: item.icon, text: item.title)
+        ZStack {
+            Button(action: {
+                self.show.toggle()
+            }) {
+                Text("Open Menu")
             }
-            Spacer()
+
+            VStack(alignment: .leading, spacing: 20) {
+                ForEach(menu) { item in
+                    MenuRow(image: item.icon, text: item.title)
+                }
+                Spacer()
+            }
+            .padding(.top, 20)
+            .padding(30)
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .background(Color.white)
+            .cornerRadius(30)
+            .padding(.trailing, 60)
+            .shadow(radius: 20)
+            .animation(.easeIn)
+            .offset(x: show ? 0 : -UIScreen.main.bounds.width)
+            .onTapGesture {
+                self.show.toggle()
+            }
         }
-        .padding(.top, 20)
-        .padding(30)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(30)
-        .padding(.trailing, 60)
-        .shadow(radius: 20)
 
     }
 }
