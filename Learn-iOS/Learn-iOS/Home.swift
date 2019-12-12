@@ -42,3 +42,9 @@ struct MenuRow: View {
         }
     }
 }
+
+struct Menu: Identifiable {
+    var id = UUID()
+    var title: String
+    var icon: String
+}
