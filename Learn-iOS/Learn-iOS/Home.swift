@@ -18,14 +18,18 @@ struct Home: View {
     
     var body: some View {
         ZStack {
-            Button(action: {
-                self.show.toggle()
-            }) {
-                Text("Open Menu")
+            VStack {
+                HStack {
+                     MenuButton(show: $show)
+                    Spacer()
+                     MenuRight(show: $show)
+                }
+                .padding([.top, .trailing])
+                Spacer()
             }
+            ContentView()
             MenuView(show: $show)
         }
-
     }
 }
 
@@ -36,8 +40,8 @@ struct Home_Previews: PreviewProvider {
 }
 
 struct MenuRow: View {
-    var image = "creditcard"
-    var text = "My Account"
+    var image: String
+    var text: String
     
     var body: some View {
         HStack {
@@ -77,5 +81,58 @@ struct MenuView: View {
         .onTapGesture {
             self.show.toggle()
         }
+    }
+}
+
+struct CircleButton: View {
+    var icon = "person.crop.circle"
+    var body: some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(.black)
+        }
+        .frame(width: 44, height: 44)
+        .background(Color.white)
+        .cornerRadius(30)
+        .shadow(color: Color("buttonShadow"), radius: 10, x: 0, y: 10)
+    }
+}
+
+struct MenuButton: View {
+    @Binding var show: Bool
+    
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            Button(action: { self.show.toggle() }) {
+                HStack {
+                    Spacer()
+                    Image(systemName: "list.dash")
+                        .foregroundColor(.black)
+                }
+                .padding(.trailing, 20)
+                .frame(width: 90, height: 60)
+                .background(Color.white)
+                .cornerRadius(30)
+                .shadow(color: Color("buttonShadow"), radius: 10, x: 0, y: 10)
+                .offset(x: -30)
+                
+            }
+            Spacer()
+        }
+    }
+}
+
+struct MenuRight: View {
+    @Binding var show: Bool
+    var body: some View {
+            HStack {
+                Button(action: { self.show.toggle() }) {
+                    CircleButton(icon: "person.crop.circle")
+                }
+                
+                Button(action: { self.show.toggle() }) {
+                    CircleButton(icon: "bell")
+                }
+            }
     }
 }
