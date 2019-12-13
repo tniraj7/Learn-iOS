@@ -15,19 +15,29 @@ let menuData = [
 
 struct Home: View {
     @State var show = false
+    @State var showProfile = false
     
     var body: some View {
         ZStack {
+            ContentView()
+                .background(Color.white)
+                .cornerRadius(25)
+                .shadow(radius: 20)
+                .animation(.default)
+                .offset(y: showProfile ? 80 :UIScreen.main.bounds.height)
+            
             VStack {
                 HStack {
                      MenuButton(show: $show)
+                        .offset(x: -10, y: showProfile ?  0 : 30)
+                        .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 5))
                     Spacer()
-                     MenuRight(show: $show)
+                    MenuRight(show: $showProfile)
+                        .offset(x: -16, y: showProfile ?  0 : 30)
+                        .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 10, initialVelocity: 5))
                 }
-                .padding([.top, .trailing])
                 Spacer()
             }
-            ContentView()
             MenuView(show: $show)
         }
     }
