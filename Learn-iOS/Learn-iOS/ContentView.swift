@@ -124,6 +124,7 @@ struct TitleView: View {
             Spacer()
         }
         .padding(.all)
+        .padding(.top, 70)
     }
 }
 
