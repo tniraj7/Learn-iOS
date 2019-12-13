@@ -54,7 +54,6 @@ struct ContentView: View {
                         .onChanged({ (value) in
                             self.viewState = value.translation
                             self.show = true
-                            
                         })
                         .onEnded({ (value) in
                             self.viewState = CGSize.zero
@@ -124,7 +123,6 @@ struct TitleView: View {
             Spacer()
         }
         .padding(.all)
-        .padding(.top, 70)
     }
 }
 
