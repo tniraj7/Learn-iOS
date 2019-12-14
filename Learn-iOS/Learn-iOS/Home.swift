@@ -23,7 +23,7 @@ struct Home: View {
                 .background(Color.white)
                 .cornerRadius(30)
                 .shadow(radius: 20)
-                .animation(.default)
+                .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 20, initialVelocity: 15))
                 .offset(y: showProfile ? 80 :UIScreen.main.bounds.height)
             
             VStack {
