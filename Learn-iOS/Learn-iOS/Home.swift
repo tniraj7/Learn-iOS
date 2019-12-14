@@ -83,7 +83,7 @@ struct MenuView: View {
         .frame(minWidth: 0, maxWidth: .infinity)
         .background(Color.white)
         .cornerRadius(30)
-        .padding(.trailing, 60)
+        .padding(.trailing, 30)
         .shadow(radius: 20)
         .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10.0, z: 0))
         .animation(.default)
