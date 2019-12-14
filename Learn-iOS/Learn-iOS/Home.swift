@@ -21,7 +21,7 @@ struct Home: View {
         ZStack {
             ContentView()
                 .background(Color.white)
-                .cornerRadius(25)
+                .cornerRadius(30)
                 .shadow(radius: 20)
                 .animation(.default)
                 .offset(y: showProfile ? 80 :UIScreen.main.bounds.height)
