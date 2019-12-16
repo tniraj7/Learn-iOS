@@ -16,8 +16,8 @@ struct HomeList: View {
         .background(Color("background3"))
         .cornerRadius(30)
         .frame(width: 246, height: 360)
+        .shadow(color: Color("backgroundShadow3"), radius: 20, x: 0, y: 20)
     }
-
 }
 
 struct HomeList_Previews: PreviewProvider {
