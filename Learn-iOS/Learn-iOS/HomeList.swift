@@ -78,10 +78,15 @@ struct CourseView: View {
                 .foregroundColor(Color.white)
                 .padding(20)
                 .lineLimit(4)
-                .frame(width: 150)
+                .padding(.trailing, 50)
+
             Spacer()
             Image(image)
+                .resizable()
                 .renderingMode(.original)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 246, height: 150)
+                .padding(.bottom, 30)
         }
         .background(color)
         .cornerRadius(30)
