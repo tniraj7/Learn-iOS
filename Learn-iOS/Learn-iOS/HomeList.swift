@@ -31,7 +31,7 @@ struct HomeList: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            HStack {
+            HStack(spacing: 30.0) {
                 ForEach(courses) { item in
                     Button(action: { self.showCourses.toggle() }) {
                         CourseView(
