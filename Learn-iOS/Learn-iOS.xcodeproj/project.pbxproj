@@ -64,11 +64,11 @@
 				349A5E1F239BEDFC006764F6 /* SceneDelegate.swift */,
 				349A5E21239BEDFC006764F6 /* ContentView.swift */,
 				34E8E69323A0F531003951EB /* Home.swift */,
+				34F542F523A764D000BE2F07 /* HomeList.swift */,
 				349A5E23239BEDFD006764F6 /* Assets.xcassets */,
 				349A5E28239BEDFD006764F6 /* LaunchScreen.storyboard */,
 				349A5E2B239BEDFD006764F6 /* Info.plist */,
 				349A5E25239BEDFD006764F6 /* Preview Content */,
-				34F542F523A764D000BE2F07 /* HomeList.swift */,
 			);
 			path = "Learn-iOS";
 			sourceTree = "<group>";

@@ -2,9 +2,13 @@ import SwiftUI
 
 struct HomeList: View {
     var body: some View {
-        HStack {
-            CourseView()
-        }
+        ScrollView(.horizontal, showsIndicators: false){
+            HStack {
+                ForEach(0 ..< 3) { item in
+                    CourseView()
+                }
+            }
+        }.shadow(color: Color("backgroundShadow3"), radius: 20, x: 0, y: 20)
     }
 }
 
@@ -30,6 +34,5 @@ struct CourseView: View {
         .background(Color("background3"))
         .cornerRadius(30)
         .frame(width: 246, height: 360)
-        .shadow(color: Color("backgroundShadow3"), radius: 20, x: 0, y: 20)
     }
 }
