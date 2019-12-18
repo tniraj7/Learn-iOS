@@ -22,6 +22,8 @@ struct Home: View {
             
             HomeList(showCourses: false)
                 .blur(radius: show ? 20 : 0)
+                .scaleEffect(showProfile ? 0.95 : 1)
+                .animation(.default)
             
             ContentView()
                 .cornerRadius(30)
