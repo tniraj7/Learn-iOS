@@ -30,25 +30,42 @@ struct HomeList: View {
     @State var showCourses: Bool
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false){
-            HStack(spacing: 30.0) {
-                ForEach(courses) { item in
-                    Button(action: { self.showCourses.toggle() }) {
-                        CourseView(
-                            title: item.title,
-                            image: item.image,
-                            color: item.color,
-                            shadowColor: item.shadowColor
-                        )
-                         .sheet(isPresented: self.$showCourses) {
-                                ContentView()
+        VStack {
+            HStack {
+                VStack {
+                    Text("Courses")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Text("22 Courses")
+                        .foregroundColor(Color.gray).offset(x: -20)
+                }
+                Spacer()
+            }
+            .padding(.leading, 70)
+            .padding(.bottom, 40)
+            
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing: 30.0) {
+                    ForEach(courses) { item in
+                        Button(action: { self.showCourses.toggle() }) {
+                            CourseView(
+                                title: item.title,
+                                image: item.image,
+                                color: item.color,
+                                shadowColor: item.shadowColor
+                            )
+                                .sheet(isPresented: self.$showCourses) {
+                                    ContentView()
+                            }
                         }
                     }
                 }
+                .padding(.leading, 40)
+                Spacer()
             }
-            .padding(.leading, 30)
-            Spacer()
         }
+        .padding(.top, 30.0)
     }
 }
 
@@ -78,7 +95,7 @@ struct CourseView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 .padding(.trailing, 50)
 
