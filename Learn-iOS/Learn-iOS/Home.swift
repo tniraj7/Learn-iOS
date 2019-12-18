@@ -21,6 +21,7 @@ struct Home: View {
         ZStack {
             
             HomeList(showCourses: false)
+                .blur(radius: show ? 20 : 0)
             
             ContentView()
                 .cornerRadius(30)
