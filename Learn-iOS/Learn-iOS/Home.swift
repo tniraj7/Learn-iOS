@@ -19,8 +19,10 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            
+            HomeList(showCourses: false)
+            
             ContentView()
-                .background(Color.white)
                 .cornerRadius(30)
                 .shadow(radius: 20)
                 .animation(.interpolatingSpring(mass: 1, stiffness: 100, damping: 20, initialVelocity: 15))
