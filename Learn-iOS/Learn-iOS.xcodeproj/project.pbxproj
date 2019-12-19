@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		347E3E2423AA283200DB621C /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E3E2323AA283200DB621C /* BlurView.swift */; };
+		3491B59523AB68F7000BFBD0 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B59423AB68F7000BFBD0 /* UpdateList.swift */; };
 		349A5E1E239BEDFC006764F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A5E1D239BEDFC006764F6 /* AppDelegate.swift */; };
 		349A5E20239BEDFC006764F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A5E1F239BEDFC006764F6 /* SceneDelegate.swift */; };
 		349A5E22239BEDFC006764F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349A5E21239BEDFC006764F6 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		347E3E2323AA283200DB621C /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		3491B59423AB68F7000BFBD0 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		349A5E1A239BEDFC006764F6 /* Learn-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349A5E1D239BEDFC006764F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349A5E1F239BEDFC006764F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				34E8E69323A0F531003951EB /* Home.swift */,
 				34F542F523A764D000BE2F07 /* HomeList.swift */,
 				347E3E2323AA283200DB621C /* BlurView.swift */,
+				3491B59423AB68F7000BFBD0 /* UpdateList.swift */,
 				349A5E23239BEDFD006764F6 /* Assets.xcassets */,
 				349A5E28239BEDFD006764F6 /* LaunchScreen.storyboard */,
 				349A5E2B239BEDFD006764F6 /* Info.plist */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				349A5E1E239BEDFC006764F6 /* AppDelegate.swift in Sources */,
+				3491B59523AB68F7000BFBD0 /* UpdateList.swift in Sources */,
 				34F542F623A764D000BE2F07 /* HomeList.swift in Sources */,
 				349A5E20239BEDFC006764F6 /* SceneDelegate.swift in Sources */,
 				34E8E69423A0F531003951EB /* Home.swift in Sources */,
