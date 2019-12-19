@@ -1,11 +1,23 @@
 import SwiftUI
 
 struct UpdateList: View {
+    
     var body: some View {
         NavigationView {
+            List(0 ..< 20) { item in
                 NavigationLink(destination: Text("1")) {
-                        Text("Hello, World!")
+                    Text("Hello, World!")
                 }
+            }
+            .navigationBarTitle(Text("Updates"))
+            .navigationBarItems(
+                trailing: HStack {
+                    Button(action: {
+                        
+                    }) {Image(systemName: "gear")
+                    }
+                }
+            )
         }
     }
 }
