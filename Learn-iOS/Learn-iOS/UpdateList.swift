@@ -2,6 +2,8 @@ import SwiftUI
 
 struct UpdateList: View {
     
+    @State var showSettings = false
+    
     var body: some View {
         NavigationView {
             List(0 ..< 20) { item in
@@ -12,9 +14,11 @@ struct UpdateList: View {
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(
                 trailing: HStack {
-                    Button(action: {
-                        
-                    }) {Image(systemName: "gear")
+                    Button(action: { self.showSettings.toggle() })
+                    { Image(systemName: "gear")
+                        .sheet(isPresented: self.$showSettings) {
+                            Text("Settings")
+                        }
                     }
                 }
             )
