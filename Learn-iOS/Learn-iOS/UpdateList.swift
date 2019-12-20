@@ -29,23 +29,34 @@ struct UpdateList: View {
         NavigationView {
             List(updates) { item in
                 NavigationLink(destination: Text("1")) {
-                    VStack(alignment: .leading) {
-                        Text(item.title)
-                            .font(.headline)
+                    HStack(spacing: 12.0) {
                         
-                        Text(item.text)
-                            .font(.subheadline)
-                            .lineLimit(2)
-                            .lineSpacing(4.0)
-                            .frame(height: 50.0)
+                        Image(item.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                            .background(Color("background"))
+                            .cornerRadius(20)
                         
-                        Text(item.date)
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.gray)
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                                .font(.headline)
                             
+                            Text(item.text)
+                                .font(.subheadline)
+                                .lineLimit(2)
+                                .lineSpacing(4.0)
+                                .frame(height: 50.0)
+                            
+                            Text(item.date)
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.gray)
+                                
+                        }
                     }
                 }
+                .padding(.vertical, 8.0)
             }
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(
