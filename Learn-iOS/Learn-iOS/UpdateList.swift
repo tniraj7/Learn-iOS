@@ -28,7 +28,7 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List(updates) { item in
-                NavigationLink(destination: Text("1")) {
+                NavigationLink(destination: Text(item.text)) {
                     HStack(spacing: 12.0) {
                         
                         Image(item.image)
