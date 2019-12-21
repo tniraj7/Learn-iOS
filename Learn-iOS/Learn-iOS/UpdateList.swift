@@ -22,6 +22,7 @@ let updateData = [
 struct UpdateList: View {
     
     @State var showSettings = false
+    @ObservedObject var store = UpdateStore()
     
     var updates = updateData
     
