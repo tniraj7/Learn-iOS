@@ -3,14 +3,6 @@ import Combine
 
 class UpdateStore: ObservableObject {
     
-    var didChange = PassthroughSubject<Void, Never>()
-    var updates: [Update] {
-        didSet {
-            didChange.send()
-        }
-    }
+    @Published var updates = updateData
     
-    init(updates: [Update] = []) {
-        self.updates = updates
-    }
 }
