@@ -26,9 +26,15 @@ struct UpdateList: View {
     
     var updates = updateData
     
+    func addUpdate() {
+        store.updates.append(
+            Update(image: "Certificate1", title: "New Title", text: "New Text", date: "Dec 20")
+        )
+    }
+    
     var body: some View {
         NavigationView {
-            List(updates) { item in
+            List(store.updates) { item in
                 NavigationLink(destination: UpdateDetail(title: item.title, text: item.text, image: item.image)) {
                     HStack(spacing: 12.0) {
                         
