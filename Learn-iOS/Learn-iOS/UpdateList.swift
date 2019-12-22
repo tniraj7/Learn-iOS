@@ -78,14 +78,7 @@ struct UpdateList: View {
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(
                 leading: Button(action: addUpdate) {Text("Add Update")},
-                trailing: HStack {
-                    Button(action: { self.showSettings.toggle() })
-                    { Image(systemName: "gear")
-                        .sheet(isPresented: self.$showSettings) {
-                            Text("Settings")
-                        }
-                    }
-                }
+                trailing: EditButton()
             )
         }
     }
