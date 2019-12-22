@@ -32,6 +32,10 @@ struct UpdateList: View {
         )
     }
     
+    func move(from source: IndexSet, to destination: Int) {
+        self.store.updates.swapAt(source.first!, destination)
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -69,6 +73,7 @@ struct UpdateList: View {
                 .onDelete { (index) in
                     self.store.updates.remove(at: index.first!)
                 }
+                .onMove(perform: move)
             }
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(
