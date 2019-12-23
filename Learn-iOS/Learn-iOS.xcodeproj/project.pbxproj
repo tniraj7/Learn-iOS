@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34379CFA23AE2A84009C0105 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34379CF923AE2A84009C0105 /* UpdateStore.swift */; };
+		345E4A5023B0EBD30046C6F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E4A4F23B0EBD30046C6F3 /* TabBar.swift */; };
 		3460A3C123ACE2C200F567B4 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460A3C023ACE2C200F567B4 /* UpdateDetail.swift */; };
 		347E3E2423AA283200DB621C /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E3E2323AA283200DB621C /* BlurView.swift */; };
 		3491B59523AB68F7000BFBD0 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3491B59423AB68F7000BFBD0 /* UpdateList.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		34379CF923AE2A84009C0105 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		345E4A4F23B0EBD30046C6F3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		3460A3C023ACE2C200F567B4 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		347E3E2323AA283200DB621C /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		3491B59423AB68F7000BFBD0 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				347E3E2323AA283200DB621C /* BlurView.swift */,
 				3460A3C023ACE2C200F567B4 /* UpdateDetail.swift */,
 				3491B59423AB68F7000BFBD0 /* UpdateList.swift */,
+				345E4A4F23B0EBD30046C6F3 /* TabBar.swift */,
 				34379CF923AE2A84009C0105 /* UpdateStore.swift */,
 				349A5E23239BEDFD006764F6 /* Assets.xcassets */,
 				349A5E28239BEDFD006764F6 /* LaunchScreen.storyboard */,
@@ -173,6 +176,7 @@
 				34E8E69423A0F531003951EB /* Home.swift in Sources */,
 				349A5E22239BEDFC006764F6 /* ContentView.swift in Sources */,
 				347E3E2423AA283200DB621C /* BlurView.swift in Sources */,
+				345E4A5023B0EBD30046C6F3 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
