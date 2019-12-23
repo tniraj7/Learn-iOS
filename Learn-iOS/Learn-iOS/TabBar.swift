@@ -17,6 +17,13 @@ struct TabBar: View {
                     Text("Certificates")
                 }
             }.tag(2)
+            
+            UpdateList().tabItem {
+                VStack {
+                    Image("IconSettings")
+                     Text("Updates")
+                }
+            }.tag(3)
         }
     }
 }
