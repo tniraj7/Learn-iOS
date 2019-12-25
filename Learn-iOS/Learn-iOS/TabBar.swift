@@ -4,26 +4,20 @@ struct TabBar: View {
     var body: some View {
         TabView {
             
-            Home().tabItem {
-                VStack {
+            Home().tabItem({
                     Image("IconHome")
                     Text("Home")
-                }
-            }.tag(1)
+            }).tag(1)
             
-            ContentView().tabItem {
-                VStack {
+            ContentView().tabItem({
                     Image("IconCards")
                     Text("Certificates")
-                }
-            }.tag(2)
+            }).tag(2)
             
-            UpdateList().tabItem {
-                VStack {
+            UpdateList().tabItem({
                     Image("IconSettings")
                      Text("Updates")
-                }
-            }.tag(3)
+            }).tag(3)
         }.accentColor(Color(red: 0.5333, green: 0.8706, blue: 0.1843, opacity: 1))
     }
 }
