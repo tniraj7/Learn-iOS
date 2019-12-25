@@ -1,8 +1,17 @@
 import SwiftUI
 
 struct Settings: View {
+    @State var recieve = false
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            Form {
+                Toggle(isOn: $recieve) {
+                    Text("Recieve notifications")
+                }
+            }
+            .navigationBarTitle("Settings")
+        }
     }
 }
 
