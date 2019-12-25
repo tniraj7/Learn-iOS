@@ -77,7 +77,7 @@ struct UpdateList: View {
             }
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(
-                leading: Button(action: addUpdate) {Text("Add Update")},
+                leading: Button(action: addUpdate) {Image(systemName: "plus")},
                 trailing: EditButton()
             )
         }
