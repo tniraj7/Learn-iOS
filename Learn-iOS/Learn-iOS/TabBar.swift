@@ -14,9 +14,9 @@ struct TabBar: View {
                     Text("Certificates")
             }).tag(2)
             
-            UpdateList().tabItem({
+            Settings().tabItem({
                     Image("IconSettings")
-                     Text("Updates")
+                     Text("Settings")
             }).tag(3)
         }.accentColor(Color(red: 0.5333, green: 0.8706, blue: 0.1843, opacity: 1))
     }
