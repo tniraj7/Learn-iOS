@@ -5,6 +5,7 @@ struct Settings: View {
     @State var number = 1
     @State var selection = 1
     @State var date = Date()
+    @State var email = ""
     
     var body: some View {
         NavigationView {
@@ -23,6 +24,11 @@ struct Settings: View {
                 }
                 
                 DatePicker(selection: $date, label: { Text("Date") })
+                
+                Section(header: Text("Email")) {
+                    TextField("Your email: ", text: $email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
             }
             .navigationBarTitle("Settings")
         }
