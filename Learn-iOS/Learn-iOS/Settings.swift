@@ -4,6 +4,7 @@ struct Settings: View {
     @State var recieve = false
     @State var number = 1
     @State var selection = 1
+    @State var date = Date()
     
     var body: some View {
         NavigationView {
@@ -20,6 +21,8 @@ struct Settings: View {
                     Text("SwiftUI").tag(1)
                     Text("React.js").tag(2)
                 }
+                
+                DatePicker(selection: $date, label: { Text("Date") })
             }
             .navigationBarTitle("Settings")
         }
