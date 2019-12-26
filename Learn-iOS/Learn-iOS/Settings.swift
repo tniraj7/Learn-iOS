@@ -33,6 +33,12 @@ struct Settings: View {
                 
                 Button(action: { self.submit.toggle()}) { Text("Submit") }
                 
+                .alert(isPresented: $submit) {
+                    Alert(
+                        title: Text("Thanks!"),
+                        message: Text("Email: \(email)\n Notifications: \(number) email per week\n Favorite Course: \(selection)\n Date: \(date)"),
+                        dismissButton: .default(Text("Ok")))
+                }
             }
             .navigationBarTitle("Settings")
         }
