@@ -6,6 +6,7 @@ struct Settings: View {
     @State var selection = 1
     @State var date = Date()
     @State var email = ""
+    @State var submit = false
     
     var body: some View {
         NavigationView {
@@ -29,6 +30,9 @@ struct Settings: View {
                     TextField("Your email: ", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
+                
+                Button(action: { self.submit.toggle()}) { Text("Submit") }
+                
             }
             .navigationBarTitle("Settings")
         }
