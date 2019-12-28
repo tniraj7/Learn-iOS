@@ -49,15 +49,18 @@ struct HomeList: View {
                 HStack(spacing: 30.0) {
                     ForEach(courses) { item in
                         Button(action: { self.showCourses.toggle() }) {
-                            CourseView(
-                                title: item.title,
-                                image: item.image,
-                                color: item.color,
-                                shadowColor: item.shadowColor
-                            )
-                                .sheet(isPresented: self.$showCourses) {
-                                    ContentView()
+                            GeometryReader { gr in
+                                CourseView(
+                                    title: item.title,
+                                    image: item.image,
+                                    color: item.color,
+                                    shadowColor: item.shadowColor
+                                )
+                                    .sheet(isPresented: self.$showCourses) {
+                                        ContentView()
+                                }
                             }
+                            .frame(width: 246, height: 150.0)
                         }
                     }
                 }
