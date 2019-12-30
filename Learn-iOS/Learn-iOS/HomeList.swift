@@ -56,7 +56,13 @@ struct HomeList: View {
                                     color: item.color,
                                     shadowColor: item.shadowColor
                                 )
-                                    .sheet(isPresented: self.$showCourses) {
+                                .rotation3DEffect(
+                                    Angle(
+                                        degrees:
+                                            Double(gr.frame(in: .global).minX - 40) / -20
+                                        ),
+                                        axis: (x: 0, y: 10.0, z: 0))
+                                .sheet(isPresented: self.$showCourses) {
                                         ContentView()
                                 }
                             }
