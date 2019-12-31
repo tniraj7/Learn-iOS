@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34379CFA23AE2A84009C0105 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34379CF923AE2A84009C0105 /* UpdateStore.swift */; };
+		344267D523BB93A600F814CF /* CertificateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344267D423BB93A600F814CF /* CertificateRow.swift */; };
 		345E4A5023B0EBD30046C6F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345E4A4F23B0EBD30046C6F3 /* TabBar.swift */; };
 		3460A3C123ACE2C200F567B4 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460A3C023ACE2C200F567B4 /* UpdateDetail.swift */; };
 		347E3E2423AA283200DB621C /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347E3E2323AA283200DB621C /* BlurView.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		34379CF923AE2A84009C0105 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		344267D423BB93A600F814CF /* CertificateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRow.swift; sourceTree = "<group>"; };
 		345E4A4F23B0EBD30046C6F3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		3460A3C023ACE2C200F567B4 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		347E3E2323AA283200DB621C /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				349A5E1D239BEDFC006764F6 /* AppDelegate.swift */,
 				349A5E1F239BEDFC006764F6 /* SceneDelegate.swift */,
 				349A5E21239BEDFC006764F6 /* ContentView.swift */,
+				344267D423BB93A600F814CF /* CertificateRow.swift */,
 				34E8E69323A0F531003951EB /* Home.swift */,
 				34F542F523A764D000BE2F07 /* HomeList.swift */,
 				347E3E2323AA283200DB621C /* BlurView.swift */,
@@ -180,6 +183,7 @@
 				349A5E22239BEDFC006764F6 /* ContentView.swift in Sources */,
 				347E3E2423AA283200DB621C /* BlurView.swift in Sources */,
 				34E8BC5623B361070051B593 /* Settings.swift in Sources */,
+				344267D523BB93A600F814CF /* CertificateRow.swift in Sources */,
 				345E4A5023B0EBD30046C6F3 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
