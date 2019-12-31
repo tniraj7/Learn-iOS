@@ -37,50 +37,54 @@ struct HomeList: View {
     @State var showCourses: Bool
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack {
-                    Text("Courses")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Text("22 Courses")
-                        .foregroundColor(Color.gray).offset(x: -20)
+        ScrollView {
+            VStack {
+                HStack {
+                    VStack {
+                        Text("Courses")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Text("22 Courses")
+                            .foregroundColor(Color.gray).offset(x: -20)
+                    }
+                    Spacer()
                 }
-                Spacer()
-            }
-            .padding(.leading, 70)
-            
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 30.0) {
-                    ForEach(courses) { item in
-                        Button(action: { self.showCourses.toggle() }) {
-                            GeometryReader { gr in
-                                CourseView(
-                                    title: item.title,
-                                    image: item.image,
-                                    color: item.color,
-                                    shadowColor: item.shadowColor
-                                )
-                                .rotation3DEffect(
-                                    Angle(
-                                        degrees:
-                                            Double(gr.frame(in: .global).minX - 40) / -20
-                                        ),
-                                        axis: (x: 0, y: 10.0, z: 0))
-                                .sheet(isPresented: self.$showCourses) {
-                                        ContentView()
+                .padding(.leading, 70)
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 30.0) {
+                        ForEach(courses) { item in
+                            Button(action: { self.showCourses.toggle() }) {
+                                GeometryReader { gr in
+                                    CourseView(
+                                        title: item.title,
+                                        image: item.image,
+                                        color: item.color,
+                                        shadowColor: item.shadowColor
+                                    )
+                                    .rotation3DEffect(
+                                        Angle(
+                                            degrees:
+                                                Double(gr.frame(in: .global).minX - 40) / -20
+                                            ),
+                                            axis: (x: 0, y: 10.0, z: 0))
+                                    .sheet(isPresented: self.$showCourses) {
+                                            ContentView()
+                                    }
                                 }
+                                .frame(width: 246, height: 150.0)
                             }
-                            .frame(width: 246, height: 150.0)
                         }
                     }
+                    .padding(.leading, 40)
+                    .padding(.top, 10)
+                    Spacer()
                 }
-                .padding(.leading, 40)
-                .padding(.top, 30)
-                Spacer()
+                .frame(height: 420)
+                CertificateRow()
             }
+            .padding(.top, 30.0)
         }
-        .padding(.top, 30.0)
     }
 }
 
