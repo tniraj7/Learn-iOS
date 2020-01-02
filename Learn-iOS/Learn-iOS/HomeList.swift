@@ -72,18 +72,18 @@ struct HomeList: View {
                                             ContentView()
                                     }
                                 }
-                                .frame(width: 246, height: 150.0)
+                                .frame(width: 246, height: 360.0)
                             }
                         }
                     }
                     .padding(.leading, 40)
-                    .padding(.top, 10)
+                    .padding(.top, 30)
                     Spacer()
                 }
-                .frame(height: 420)
+                .frame(height: 450)
                 CertificateRow()
             }
-            .padding(.top, 30.0)
+            .padding(.top, 78.0)
         }
     }
 }
