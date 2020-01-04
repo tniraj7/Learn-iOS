@@ -10,7 +10,8 @@ An iOS app that helps you learn iOS development
 ![](preview3.gif)
 
 ## Screenshots
-![](preview1.png)  
-![](preview2.png)  
-![](preview3.png)  
-![](preview4.png)  
+<img src="./preview1.png" width="300" height="650">
+<img src="./preview2.png" width="300" height="650"> 
+<img src="./preview3.png" width="300" height="650"> 
+<img src="./preview4.png" width="300" height="650">
+ 
