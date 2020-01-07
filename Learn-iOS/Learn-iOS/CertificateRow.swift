@@ -27,7 +27,7 @@ struct CertificateRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20.0) {
                     ForEach(certificates) { item in
-                        CertificateView()
+                        CertificateView(item: item)
                     }
                 }
                 .padding(20.0)

@@ -1,5 +1,5 @@
 # Learn-iOS
-An iOS app that helps you learn iOS development
+A  iOS app built in SwiftUI to mock tutorials based learning.
 
 
 ## Preview
