@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
-     
+    var item = Certificate(title: "UI Design", image: "Certificate1", width: 340, height: 220)
     var body: some View {
         ZStack {
             
@@ -42,7 +42,7 @@ struct ContentView: View {
                 .animation(.easeInOut(duration: 0.5))
                 .offset(x: viewState.width, y: viewState.height)
             
-            CertificateView()
+            CertificateView(item: item)
                 .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
@@ -82,7 +82,11 @@ struct CardView: View {
 }
 
 struct CertificateView: View {
-    var item = Certificate(title: "UI Design", image: "Certificate1", width: 340, height: 220)
+    var item: Certificate
+    
+    init(item: Certificate) {
+        self.item = item
+    }
     
     var body: some View {
         VStack {
