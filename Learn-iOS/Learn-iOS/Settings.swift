@@ -8,6 +8,7 @@ struct Settings: View {
     @State var email = ""
     @State var submit = false
     
+    var courses = ["SwiftUI", "React.js", "Flutter", "Vue.js"]
     var body: some View {
         NavigationView {
             Form {
@@ -20,8 +21,9 @@ struct Settings: View {
                 }
                 
                 Picker(selection: $selection, label: Text("Favorite Course")) {
-                    Text("SwiftUI").tag(1)
-                    Text("React.js").tag(2)
+                    ForEach(0..<courses.count) {
+                        Text("\(self.courses[$0])")
+                    }
                 }
                 
                 DatePicker(selection: $date, label: { Text("Date") })
@@ -36,8 +38,9 @@ struct Settings: View {
                 .alert(isPresented: $submit) {
                     Alert(
                         title: Text("Thanks!"),
-                        message: Text("Email: \(email)\n Notifications: \(number) email per week\n Favorite Course: \(selection)\n Date: \(date)"),
-                        dismissButton: .default(Text("Ok")))
+                        message: Text("Email: \(email)\n Notifications: \(number) email per week\n Favorite Course: \(courses[selection])\n Date: \(date)"),
+                        dismissButton: .default(Text("Ok"))
+                    )
                 }
             }
             .navigationBarTitle("Settings")
